@@ -18,7 +18,7 @@
   
   	<script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js" integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA==" crossorigin=""></script>
 
-	<link rel="stylesheet" href="/_assets/css/styles.css" />
+	<link rel="stylesheet" href="_assets/css/styles.css" />
 
 	
 
