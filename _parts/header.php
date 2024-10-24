@@ -28,7 +28,7 @@
 <div class="container-fluid" id="topbar">
 	<div class="row">
 		<div class="col-md-6">
-			<a href="/">Tentoonstellingen</a> / een Hic Sunt Leones project 
+			<a href="/">Home</a>
 		</div>
 		<div class="col-md-6" id="navbar">
 			<a href="/over.php">over deze site</a>

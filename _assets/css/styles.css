@@ -4,7 +4,7 @@ body{
 	padding: 0;
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	font-size: 16px;
-	background-color: #646464;
+	background-color: #000;
 	color: #f6edee;
 }
 #topbar{
@@ -60,7 +60,7 @@ h1{
 	margin-top: 10px;
 	margin-bottom: 14px;
 	padding-bottom: 12px;
-	font-size: 48px;
+	font-size: 36px;
 	font-family: 'Times New Roman', serif;
 }
 h2{
