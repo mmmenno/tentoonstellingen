@@ -25,7 +25,7 @@
 	
 </head>
 
-<div class="container-fluid" id="topbar">
+<div class="container" id="topbar">
 	<div class="row">
 		<div class="col-md-6">
 			<a href="/">Home</a>

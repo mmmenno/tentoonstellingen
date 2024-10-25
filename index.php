@@ -6,7 +6,7 @@ include("_parts/header.php");
 
 ?>
 
-
+<!--
 <div class="container-fluid" id="subheader">
 	<div class="row">
 		<div class="col-md-12">
@@ -32,41 +32,90 @@ include("_parts/header.php");
 		</div>
 	</div>
 </div>
+-->
 
 
-<div class="container-fluid" id="main">
-	<h1>Straatleven</h1>
-	<h2>Vier eeuwen bronnen over bewoners van de Joodse buurt van Amsterdam. Per straat te benaderen, per pand te bekijken. Disclaimer: deze applicatie is nog volop in ontwikkeling!</h2>
+<div class="container" id="main">
+	<h1>Een archief van tentoonstellingen in Nederlandse musea, wordt het daar geen tijd voor?</h1>
+
 
 	<div class="row">
 		
+		<div class="col-md-7">
+			<p class="lead">Al meer dan een eeuw maken musea tentoonstellingen. Daar wordt veel tijd, moeite en geld ingestoken. En dan, als ze voorbij zijn, leven ze nog slechts een paar jaar voort op een hoekje van de website, totdat alleen de catalogus nog over is.</p>
+
+			<p class="lead">Terwijl ze ons veel kunnen leren over hetgeen ze tot onderwerp hadden, de objecten die er te zien waren, de mensen en instellingen die ze maakten en de tijd waarin ze gemaakt werden.</p>
+
+			<p class="lead">Alle reden dus om ze te beschrijven, te verbinden en te publiceren. Een plek die daar erg geschikt voor is, is Wikidata.</p>
+		</div>
+
+		<div class="col-md-5">
+			<img src="_assets/img/publieke-werken.jpg" style="" />
+			<p class="onderschrift">100 jaar <a href="http://www.wikidata.org/entity/Q27995517">Publieke Werken</a>. In het <a href="http://www.wikidata.org/entity/Q42175133">Stedelijk Museum</a> wordt de tentoonstelling <a href="http://www.wikidata.org/entity/Q130641334">Amsterdam, verleden en toekomst</a> ingericht. Maquette van het Muntplein - <a href="https://archief.amsterdam/beeldbank/detail/7520153d-6d7a-c076-5680-53a3be98398d">collectie Stadsarchief Amsterdam</a></p>
+		</div>
+	</div>
+
+	
+
+	<div class="row" style="margin-top:28px;">
+		
 		<div class="col-md-4">
-			<div class="personblock">
-				<h3>Over de Joodse buurt</h3>
+			
+				<h3>Hoeveel staat er nu op Wikidata?</h3>
 				
-				<p>Amsterdam is al eeuwenlang het centrum van Joods leven in Nederland. De Joodse aanwezigheid in Amsterdam begon rond 1600 toen grotere groepen uit Spaanstalige gebieden en uit Antwerpen een veilig heenkomen zochten. Deze Sefardische Joden werden weliswaar geconfronteerd met een aantal beperkingen (men kon bijvoorbeeld geen lid van de gilden worden) maar later vond er een wettelijke gelijkstelling en emancipatie van de Joodse bevolking plaats. Joden hadden een bijnaam voor de stad: Mokum, het Jiddisje woord voor plaats. Voor de Tweede Wereldoorlog woonden in Amsterdam ongeveer 79.000 joden met hun eigen typische beroepen, verenigingen, gewoonten, markten en hun eigen buurten. Het Joodse leven gaf de hoofdstad een heel eigen gezicht. Joden leefden aanvankelijk geïsoleerd maar in de 19e en 20e eeuw traden ze steeds meer naar buiten. Na de oorlog ging het joods leven op veel kleinere schaal verder.</p>
+				<p></p>
 				
-				<p>Lees meer over de geschiedenis van de Joodse buurt op de website van het <a href="https://jck.nl/nl/longread/geschiedenis-van-de-joden-amsterdam">Joods Cultureel Kwartier</a>.</p>
-				
-			</div>
+			
 		</div>
 
 		<div class="col-md-4">
-			<div class="personblock">
-				<h3>Bronnen verbonden</h3>
+			
+				<h3>In de krant</h3>
 				
-				<p>Dit project is het resultaat van een samenwerking van het Joods Museum en de Amsterdam Time Machine (ATM), een onderzoeksprogramma van de Universiteit van Amsterdam (UvA). De organisaties hebben de handen ineengeslagen om databronnen uit verschillende archieven en collecties over Joods Amsterdam te verbinden. We zijn in deze samenwerking gestart met twee straten: de Jodenbreestraat en de Nieuwe Amstelstraat. Er wordt hierbij gebruikt gemaakt van een eigen dataverzameling van het Joods Museum (opgeslagen in de database nodegoat), de geo-infrastructuur van <a href="https://adamlink.nl/">Adamlink</a>, de ervaring uit eerdere pilots met de ATM en datasets van het Stadsarchief Amsterdam, het Niod en het IISG. Zie voor een overzicht van de datasets de sectie ‘databronnen’ op deze site. Met deze samenwerking doen we ervaring op met het visualiseren van databronnen vanuit verschillende instellingen, voor een publiek van geïnteresseerde Amsterdammers en bezoekers aan het Joods Cultureel Kwartier (JCK). Deze ervaring zal enerzijds benut worden om de mogelijkheden van het combineren van linked data bronnen in de praktijk te demonstreren en anderzijds om te werken aan een publieksapplicatie voor bewoners en bezoekers van het Joods Cultureel Kwartier. Ook wordt nadrukkelijk gekeken naar de mogelijkheden om dit type applicatie op te schalen naar grotere delen van Amsterdam. Voor deze pilot is aansluiting gezocht bij het co-creatie project <a href="https://niw.nl/licht-op-vlooienburg/">Licht op Vlooienburg</a> van de UvA (hoogleraar Bart Wallet en projectleider Julia van der Krieke), het JCK, Aanpak Binnenstad en het Stadsarchief Amsterdam. Dit project stelt zich ten doel vijf eeuwen Joodse aanwezigheid op een creatieve wijze zichtbaarder te maken.</p>
+				<p>In <a href="https://www.delpher.nl/nl/kranten">Delpher</a> zijn van veel tentoonstellingen recensies te vinden. In Wikidata is daar vanaf tentoonstellingsitems met de property '<a href="https://www.wikidata.org/wiki/Property:P973">beschreven op url</a>' naar te linken. Bekijk bijvoorbeeld de aldus verbonden krantenartikelen van tentoonstellingen in ...</p>
+
+				<ul>
+					<li><a href="kranten.php?organisator=Q1820897">het Amsterdam Museum</a></li>
+					<li>Museum Willet-Holthuysen</li>
+				</ul>
 				
-			</div>
+			
 		</div>
 
 		<div class="col-md-4">
-			<div class="personblock">
-				<h3>Een tijdmachine voor Amsterdam</h3>
+			
+				<h3>Onderwerpen</h3>
 				
-				<p>De Amsterdam Time Machine (ATM) is een open onderzoeksinfrastructuur over de geschiedenis van Amsterdam. In deze ‘Google Earth van het verleden’ zullen gebruikers uiteindelijk in staat zijn terug in de tijd te reizen en door de stad te navigeren op het niveau van buurten, straten en huizen. De ATM is onderdeel van de Europese Time Machine organisatie – een alliantie van bijna 600 organisaties uit 40 landen. Onder leiding van de UvA wordt samengewerkt met partners uit het veld van onderzoek, erfgoed, de creatieve industrie en met maatschappelijke organisaties. Het doel is alle digitale historische data van de stad en haar inwoners met elkaar te verbinden en te koppelen aan historische kaarten en 3D modellen. Met deze pilot willen we onderzoeken hoe dit type website opgeschaald kan worden naar een groter deel van Amsterdam. Tevens creëren we een ‘proeftuin’ waar medewerkers van instellingen kunnen zien hoe hun data er uitziet, op de kaart, en hoe de data te verbinden is. De ATM wil met haar projecten bijdragen aan de toekomstige inrichting van de stad onder het motto ‘Understanding the past to help shape the future’.</p>
+				<p></p>
 				
-			</div>
+			
+		</div>
+
+
+	</div>
+
+
+	<div class="row" style="margin-top:28px;">
+		
+		<div class="col-md-4">
+			
+				<h3>Affiches</h3>
+				
+				<p></p>
+				
+			
+		</div>
+
+		<div class="col-md-4">
+			
+				
+				
+			
+		</div>
+
+		<div class="col-md-4">
+			
+			
 		</div>
 
 

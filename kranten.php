@@ -54,7 +54,7 @@ include("_parts/header.php");
 
 
 
-<div class="container-fluid" id="main">
+<div class="container" id="main">
 	<h1>Tentoonstellingen <?= $naam ?> in de krant</h1>
 	
 	<div class="row">
