@@ -28,10 +28,10 @@
 <div class="container" id="topbar">
 	<div class="row">
 		<div class="col-md-6">
-			<a href="/">Home</a>
+			<a href="https://hicsuntleones.nl/tentoonstellingen/">Home</a>
 		</div>
 		<div class="col-md-6" id="navbar">
-			<a href="/over.php">over deze site</a>
+			<a href="https://hicsuntleones.nl/tentoonstellingen/over.php">over deze site</a>
 		</div>
 	</div>
 </div>
