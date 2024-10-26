@@ -69,7 +69,11 @@ include("_parts/header.php");
 				<h3><?= $v['itemLabel']['value'] ?></h3>
 
 				<a href="<?= $v['url']['value'] ?>">
-					<img style="width:100%" src="<?= $delpherimgs[$v['url']['value']][4] ?>" />
+					<?php if(isset($delpherimgs[$v['url']['value']][4])){ ?>
+						<img style="width:100%" src="<?= $delpherimgs[$v['url']['value']][4] ?>" />
+					<?php }else{ ?>
+						bekijk afbeelding op Delpher
+					<?php } ?>
 				</a>
 						
 						
