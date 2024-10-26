@@ -7,9 +7,13 @@ if(isset($_GET['organisator'])){
 	$organiser = $_GET['organisator'];
 }
 
-if($organiser = "Q1820897"){
+
+if($organiser == "Q1820897"){
 	$naam = "Amsterdam Museum";
 	$csv = "amsterdam-museum-delpher.csv";
+}elseif($organiser == "Q1886176"){
+	$naam = "Museum Willet-Holthuysen";
+	$csv = "willet-holthuysen-delpher.csv";
 }
 
 $sparql = "

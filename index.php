@@ -76,7 +76,7 @@ include("_parts/header.php");
 
 				<ul>
 					<li><a href="kranten.php?organisator=Q1820897">het Amsterdam Museum</a></li>
-					<li>Museum Willet-Holthuysen</li>
+					<li><a href="kranten.php?organisator=Q1886176">Museum Willet-Holthuysen</a></li>
 				</ul>
 				
 			
