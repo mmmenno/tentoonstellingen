@@ -36,13 +36,13 @@ include("_parts/header.php");
 
 
 <div class="container" id="main">
-	<h1>Een archief van tentoonstellingen in Nederlandse musea, wordt het daar geen tijd voor?</h1>
+	<h1>Een archief van tentoonstellingen in Nederland, wordt het daar niet eens tijd voor?</h1>
 
 
 	<div class="row">
 		
 		<div class="col-md-7">
-			<p class="lead">Al meer dan een eeuw maken musea tentoonstellingen. Daar wordt veel tijd, moeite en geld ingestoken. En dan, als ze voorbij zijn, leven ze nog slechts een paar jaar voort op een hoekje van de website, totdat alleen de catalogus nog over is.</p>
+			<p class="lead">Al meer dan een eeuw maken musea tentoonstellingen. Daar wordt veel tijd, moeite en geld ingestoken. En dan, als ze voorbij zijn, leven ze nog een paar jaar op een hoekje van de website, totdat alleen de catalogus nog over is.</p>
 
 			<p class="lead">Terwijl ze ons veel kunnen leren over hetgeen ze tot onderwerp hadden, de objecten die er te zien waren, de mensen en instellingen die ze maakten en de tijd waarin ze gemaakt werden.</p>
 
@@ -61,9 +61,17 @@ include("_parts/header.php");
 		
 		<div class="col-md-4">
 			
-				<h3>Hoeveel staat er nu op Wikidata?</h3>
+				<h3>Aantallen op Wikidata</h3>
 				
-				<p></p>
+				<p>Er staan op het moment van schrijven zo'n 3600 Nederlandse kunst- en tijdelijke tentoonstellingen op Wikidata. Die zijn te groeperen, zoals hieronder op organisator of op locatie.</p>
+
+				<iframe style="width: 100%; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%20%23defaultView%3ABubbleChart%0ASELECT%20%3Forganiser%20%3ForganiserLabel%20(COUNT(%3Fitem)%20AS%20%3Fnr)%20WHERE%20%7B%0A%20%20values%20%3Fexpo%20%7B%20wd%3AQ29023906%20wd%3AQ667276%20%7D%0A%20%20%3Fitem%20wdt%3AP31%20%3Fexpo%20.%0A%20%20%3Fitem%20wdt%3AP17%20wd%3AQ55%20.%0A%20%20%3Fitem%20wdt%3AP664%20%3Forganiser%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22nl%2Cen%22.%20%7D%0A%7D%0Agroup%20by%20%3Forganiser%20%3ForganiserLabel%0Alimit%201000" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+
+				<p class="onderschrift">Aantallen tentoonstellingen per organisator, ook als <a href="https://w.wiki/Bizs">lijst te bekijken</a>.</p>
+
+				<iframe style="width: 100%; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23defaultView%3ABubbleChart%0ASELECT%20%3Flocatie%20%3FlocatieLabel%20(COUNT(%3Fitem)%20AS%20%3Fnr)%20WHERE%20%7B%0A%20%20values%20%3Fexpo%20%7B%20wd%3AQ29023906%20wd%3AQ667276%20%7D%0A%20%20%3Fitem%20wdt%3AP31%20%3Fexpo%20.%0A%20%20%3Fitem%20wdt%3AP17%20wd%3AQ55%20.%0A%20%20%3Fitem%20wdt%3AP276%20%3Flocatie%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22nl%2Cen%22.%20%7D%0A%7D%0Agroup%20by%20%3Flocatie%20%3FlocatieLabel%0Alimit%201000" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+
+				<p class="onderschrift">Aantallen tentoonstellingen per locatie, ook als <a href="https://w.wiki/Bi$S">lijst te bekijken</a>.</p>
 				
 			
 		</div>
