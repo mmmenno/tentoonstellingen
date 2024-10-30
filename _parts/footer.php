@@ -2,7 +2,7 @@
 
 
 
-<div class="container-fluid" id="footer">
+<div class="container" id="footer">
 	<div class="row">
 		<div class="col-md-4">
 			<h5>Een Hic Sunt Leones project</h5>
