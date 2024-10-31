@@ -36,7 +36,7 @@ include("_parts/header.php");
 
 
 <div class="container" id="main">
-	<h1>Een NL tentoonstellingsarchief, wordt het daar niet eens tijd voor?</h1>
+	<h1>Tentoonstellingen in NL archiveren, wordt het daar niet eens tijd voor?</h1>
 
 
 	<div class="row">
@@ -99,8 +99,11 @@ include("_parts/header.php");
 
 				<h3>Archieven</h3>
 				
-				<p></p>
-				
+				<p>Correspondentie, ontwerpschetsen, foto's, etc. komen in het archief van het museum terecht. Soms komt die documentatie na verloop van tijd bij een archiefinstelling terecht. Zo zijn tentoonstellingen van de Amsterdamse gemeentelijke musea online terug te vinden bij het Stadsarchief Amsterdam.</p>
+
+				<img src="_assets/img/kosten-pw-tentoonstelling.jpg" />
+
+				<p class="onderschrift">De rekening van de tentoonstelling <a href="http://www.wikidata.org/entity/Q130641334">Amsterdam, verleden en toekomst</a> is terug te vinden <a href="https://archief.amsterdam/inventarissen/file/3b17dbba-b7c8-f19d-b8fb-163f40bb6d51">in het Stadsarchief Amsterdam</a>. Blijkbaar was het btw-tariefin 1950 drie procent.</p>
 			
 		</div>
 
