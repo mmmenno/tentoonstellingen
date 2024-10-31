@@ -5,7 +5,7 @@ body{
 	font-family: "Helvetica Neue", Arial, sans-serif;
 	font-size: 16px;
 	background-color: #000;
-	color: #f3e7ef;
+	color: #e9ddd0;
 }
 #topbar{
 	background-color: #000;
@@ -25,16 +25,6 @@ body{
 	background-color: #000;
 	padding-top: 8px;
 	padding-bottom: 100px;
-}
-#subheader{
-	background-color: #ac2336;
-	background-image: url(/_assets/img/straatleven-bg.jpg);
-  	background-repeat: no-repeat;
-  	background-size: cover;
-  	padding-top: 160px;
-	padding-bottom: 24px;
-	margin-bottom: 0;
-	color: #fff;
 }
 .lead{
 	font-size: 26px;
@@ -107,7 +97,6 @@ a:hover{
 	color: #da2e4a;
 }
 #topbar a, #footer a{
-	color: #fff;
 	font-weight: bold;
 	text-decoration: none;
 }
@@ -117,7 +106,7 @@ a:hover{
 
 #footer{
 	background-color: #000;
-	border-top: 2px solid #da2e4a;
+	border-top: 2px dotted #847d7e;
 	margin-top: 12px;
 	padding-top: 32px;
 	padding-bottom: 40px;
@@ -125,8 +114,8 @@ a:hover{
 }
 img{
 	width: 100%;
-	margin-bottom: 8px;
-	margin-top: 8px;
+	margin-bottom: 4px;
+	margin-top: 20px;
 }
 .btn-primary{
 	background-color: #000;

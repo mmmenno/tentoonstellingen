@@ -50,7 +50,7 @@ include("_parts/header.php");
 		</div>
 
 		<div class="col-md-5">
-			<img src="_assets/img/publieke-werken.jpg" style="" />
+			<img src="_assets/img/publieke-werken.jpg" style="margin-top: 0;" />
 			<p class="onderschrift">100 jaar <a href="http://www.wikidata.org/entity/Q27995517">Publieke Werken</a>. In het <a href="http://www.wikidata.org/entity/Q42175133">Stedelijk Museum</a> wordt de tentoonstelling <a href="http://www.wikidata.org/entity/Q130641334">Amsterdam, verleden en toekomst</a> ingericht. Maquette van het Muntplein - <a href="https://archief.amsterdam/beeldbank/detail/7520153d-6d7a-c076-5680-53a3be98398d">collectie Stadsarchief Amsterdam</a></p>
 		</div>
 	</div>
@@ -65,11 +65,11 @@ include("_parts/header.php");
 				
 				<p>Er staan op het moment van schrijven zo'n 3600 Nederlandse kunst- en tijdelijke tentoonstellingen op Wikidata. Die zijn te groeperen, zoals hieronder op organisator of op locatie.</p>
 
-				<iframe style="width: 100%; height: 50vh; border: none; " src="https://query.wikidata.org/embed.html#%20%23defaultView%3ABubbleChart%0ASELECT%20%3Forganiser%20%3ForganiserLabel%20(COUNT(%3Fitem)%20AS%20%3Fnr)%20WHERE%20%7B%0A%20%20values%20%3Fexpo%20%7B%20wd%3AQ29023906%20wd%3AQ667276%20%7D%0A%20%20%3Fitem%20wdt%3AP31%20%3Fexpo%20.%0A%20%20%3Fitem%20wdt%3AP17%20wd%3AQ55%20.%0A%20%20%3Fitem%20wdt%3AP664%20%3Forganiser%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22nl%2Cen%22.%20%7D%0A%7D%0Agroup%20by%20%3Forganiser%20%3ForganiserLabel%0Alimit%201000" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+				<iframe style="width: 100%; height: 50vh; border: none; margin: 20px 0 4px 0; opacity: 0.8; " src="https://query.wikidata.org/embed.html#%20%23defaultView%3ABubbleChart%0ASELECT%20%3Forganiser%20%3ForganiserLabel%20(COUNT(%3Fitem)%20AS%20%3Fnr)%20WHERE%20%7B%0A%20%20values%20%3Fexpo%20%7B%20wd%3AQ29023906%20wd%3AQ667276%20%7D%0A%20%20%3Fitem%20wdt%3AP31%20%3Fexpo%20.%0A%20%20%3Fitem%20wdt%3AP17%20wd%3AQ55%20.%0A%20%20%3Fitem%20wdt%3AP664%20%3Forganiser%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22nl%2Cen%22.%20%7D%0A%7D%0Agroup%20by%20%3Forganiser%20%3ForganiserLabel%0Alimit%201000" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
 
 				<p class="onderschrift">Aantallen tentoonstellingen per organisator, ook als <a href="https://w.wiki/Bizs">lijst te bekijken</a>.</p>
 
-				<iframe style="width: 100%; height: 50vh; border: none;" src="https://query.wikidata.org/embed.html#%23defaultView%3ABubbleChart%0ASELECT%20%3Flocatie%20%3FlocatieLabel%20(COUNT(%3Fitem)%20AS%20%3Fnr)%20WHERE%20%7B%0A%20%20values%20%3Fexpo%20%7B%20wd%3AQ29023906%20wd%3AQ667276%20%7D%0A%20%20%3Fitem%20wdt%3AP31%20%3Fexpo%20.%0A%20%20%3Fitem%20wdt%3AP17%20wd%3AQ55%20.%0A%20%20%3Fitem%20wdt%3AP276%20%3Flocatie%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22nl%2Cen%22.%20%7D%0A%7D%0Agroup%20by%20%3Flocatie%20%3FlocatieLabel%0Alimit%201000" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+				<iframe style="width: 100%; height: 50vh; border: none; margin: 20px 0 4px 0; opacity: 0.8; " src="https://query.wikidata.org/embed.html#%23defaultView%3ABubbleChart%0ASELECT%20%3Flocatie%20%3FlocatieLabel%20(COUNT(%3Fitem)%20AS%20%3Fnr)%20WHERE%20%7B%0A%20%20values%20%3Fexpo%20%7B%20wd%3AQ29023906%20wd%3AQ667276%20%7D%0A%20%20%3Fitem%20wdt%3AP31%20%3Fexpo%20.%0A%20%20%3Fitem%20wdt%3AP17%20wd%3AQ55%20.%0A%20%20%3Fitem%20wdt%3AP276%20%3Flocatie%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22nl%2Cen%22.%20%7D%0A%7D%0Agroup%20by%20%3Flocatie%20%3FlocatieLabel%0Alimit%201000" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
 
 				<p class="onderschrift">Aantallen tentoonstellingen per locatie, ook als <a href="https://w.wiki/Bi$S">lijst te bekijken</a>.</p>
 				
