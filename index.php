@@ -57,7 +57,7 @@ include("_parts/header.php");
 
 	
 
-	<div class="row" style="margin-top:28px;">
+	<div class="row">
 		
 		<div class="col-md-4">
 			
@@ -103,7 +103,7 @@ include("_parts/header.php");
 
 				<img src="_assets/img/kosten-pw-tentoonstelling.jpg" />
 
-				<p class="onderschrift">De rekening van de tentoonstelling <a href="http://www.wikidata.org/entity/Q130641334">Amsterdam, verleden en toekomst</a> is terug te vinden <a href="https://archief.amsterdam/inventarissen/file/3b17dbba-b7c8-f19d-b8fb-163f40bb6d51">in het Stadsarchief Amsterdam</a>. Blijkbaar was het btw-tariefin 1950 drie procent.</p>
+				<p class="onderschrift">De rekening van de tentoonstelling <a href="http://www.wikidata.org/entity/Q130641334">Amsterdam, verleden en toekomst</a> is terug te vinden <a href="https://archief.amsterdam/inventarissen/file/3b17dbba-b7c8-f19d-b8fb-163f40bb6d51">in het Stadsarchief Amsterdam</a>. Blijkbaar was het btw-tarief in 1950 drie procent.</p>
 			
 		</div>
 
