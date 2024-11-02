@@ -77,6 +77,20 @@ include("_parts/header.php");
 		</div>
 
 		<div class="col-md-4">
+
+
+				<h3>Tentoonstellingen per locatie</h3>
+				
+				<p></p>
+
+				<ul>
+					<li><a href="locatie.php?locatie=Q2466999">De Waag</a></li>
+					<li><a href="locatie.php?locatie=Q130730258">Joods Museum</a></li>
+					<li><a href="locatie.php?locatie=Q2077209">Paleis voor Volksvlijt</a></li>
+				</ul>
+
+
+
 			
 				<h3>In de krant</h3>
 				

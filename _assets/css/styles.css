@@ -77,12 +77,13 @@ h4{
 	font-family: 'Times New Roman', serif;
 }
 h5{
-	margin-top: 0;
-	padding-top: 0;
-	padding-bottom: 6px;
+	margin-top: 12px;
+	padding-top: 4px;
+	padding-bottom: 0;
 	font-size: 18px;
 	font-style: italic;
 	font-family: 'Times New Roman', serif;
+	border-top: 2px dotted #847d7e;
 }
 p{
 	margin-top: 12px;
