@@ -66,7 +66,7 @@ include("_parts/header.php");
 		<?php foreach ($data['results']['bindings'] as $k => $v) { ?>
 
 			<div class="col-md-3">
-				<h3><?= $v['itemLabel']['value'] ?></h3>
+				<h3><a href="<?= $v['item']['value'] ?>"><?= $v['itemLabel']['value'] ?></a></h3>
 
 				<a href="<?= $v['url']['value'] ?>">
 					<?php if(isset($delpherimgs[$v['url']['value']][4])){ ?>

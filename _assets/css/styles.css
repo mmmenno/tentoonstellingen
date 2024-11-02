@@ -90,11 +90,10 @@ p{
 	margin-bottom: 6px;
 }
 a{
-	color: #da2e4a;
+	color: #ff6e79;
 	text-decoration: none;
 }
 a:hover{
-	text-decoration: underline;
 	color: #da2e4a;
 }
 #topbar a, #footer a{
