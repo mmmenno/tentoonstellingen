@@ -24,6 +24,7 @@ SELECT ?item ?itemLabel ?locLabel ?begin ?eind ?organisator ?organisatorLabel WH
   }
   SERVICE wikibase:label { bd:serviceParam wikibase:language \"nl,en\". }
 }
+order by ?begin
 limit 2000
 ";
 
