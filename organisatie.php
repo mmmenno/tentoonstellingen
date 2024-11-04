@@ -2,30 +2,28 @@
 
 include("_infra/functions.php");
 
-$locatie = "Q2466999";
-if(isset($_GET['locatie'])){
-	$locatie = $_GET['locatie'];
+$organisator = "Q2466999";
+if(isset($_GET['organisator'])){
+	$organisator = $_GET['organisator'];
 }
 
-if(!preg_match("/^Q[0-9]+$/",$locatie)){
+if(!preg_match("/^Q[0-9]+$/",$organisator)){
 	die ('malformed location, want Qnumber');
 }
 
 $sparql = "
-SELECT ?item ?itemLabel ?locLabel ?begin ?eind ?organisator ?organisatorLabel WHERE {
+SELECT ?item ?itemLabel ?orgLabel ?begin ?eind ?loc ?locLabel WHERE {
   values ?expo { wd:Q29023906 wd:Q667276 }
-  values ?loc { wd:" . $locatie . " }
+  values ?org { wd:" . $organisator . " }
   ?item wdt:P31 ?expo .
   ?item wdt:P276 ?loc .
   ?item wdt:P580 ?begin .
   ?item wdt:P582 ?eind .
-  optional{
-    ?item wdt:P664 ?organisator .  
-  }
+  ?item wdt:P664 ?org . 
   SERVICE wikibase:label { bd:serviceParam wikibase:language \"nl,en\". }
 }
 order by ?begin
-limit 1500
+limit 2500
 ";
 
 //echo $sparql;
@@ -53,7 +51,7 @@ include("_parts/header.php");
 
 
 <div class="container" id="main">
-	<h1>Tentoonstellingen in <?= $data['results']['bindings'][0]['locLabel']['value'] ?></h1>
+	<h1>Tentoonstellingen van <?= $data['results']['bindings'][0]['orgLabel']['value'] ?></h1>
 	
 	<div class="row">
 
@@ -63,11 +61,11 @@ include("_parts/header.php");
 			$v = $data['results']['bindings'][$i];
 
 			$datums = fromto($v);
-			$org = displayorg($v);
+			$loc = displayloc($v);
 
 			?>
 				<h5><a href="<?= $v['item']['value'] ?>"><?= $v['itemLabel']['value'] ?></a></h5>
-				<div class="evensmaller"><?= $datums ?> <?= $org ?></div>
+				<div class="evensmaller"><?= $datums ?> <?= $loc ?></div>
 
 			<?php } ?>
 		</div>
@@ -79,11 +77,11 @@ include("_parts/header.php");
 			$v = $data['results']['bindings'][$i];
 
 			$datums = fromto($v);
-			$org = displayorg($v);
+			$loc = displayloc($v);
 
 			?>
 				<h5><a href="<?= $v['item']['value'] ?>"><?= $v['itemLabel']['value'] ?></a></h5>
-				<div class="evensmaller"><?= $datums ?> <?= $org ?></div>
+				<div class="evensmaller"><?= $datums ?> <?= $loc ?></div>
 
 			<?php } ?>
 		</div>
@@ -94,11 +92,11 @@ include("_parts/header.php");
 			$v = $data['results']['bindings'][$i];
 
 			$datums = fromto($v);
-			$org = displayorg($v);
+			$loc = displayloc($v);
 
 			?>
 				<h5><a href="<?= $v['item']['value'] ?>"><?= $v['itemLabel']['value'] ?></a></h5>
-				<div class="evensmaller"><?= $datums ?> <?= $org ?></div>
+				<div class="evensmaller"><?= $datums ?> <?= $loc ?></div>
 
 			<?php } ?>
 		</div>
@@ -109,11 +107,11 @@ include("_parts/header.php");
 			$v = $data['results']['bindings'][$i];
 
 			$datums = fromto($v);
-			$org = displayorg($v);
+			$loc = displayloc($v);
 
 			?>
 				<h5><a href="<?= $v['item']['value'] ?>"><?= $v['itemLabel']['value'] ?></a></h5>
-				<div class="evensmaller"><?= $datums ?> <?= $org ?></div>
+				<div class="evensmaller"><?= $datums ?> <?= $loc ?></div>
 
 			<?php } ?>
 		</div>
@@ -149,22 +147,26 @@ function fromto($v){
 			return $from . $to;
 }
 
-function displayorg($v){
+function displayloc($v){
 
-	if(!isset($v['organisatorLabel'])){
+	if(!isset($v['locLabel'])){
 		return "";
 	}
 
 	// afko's
-	if($v['organisatorLabel']['value'] == "Amsterdam Museum"){
-		$v['organisatorLabel']['value'] = "AHM";
+	if($v['locLabel']['value'] == "Joods Museum gebouwen"){
+		$v['locLabel']['value'] = "JM";
 	}
 
-	if($v['organisatorLabel']['value'] == "Joods Museum"){
-		$v['organisatorLabel']['value'] = "JHM";
+	if($v['locLabel']['value'] == "Museum Boijmans Van Beuningen"){
+		$v['locLabel']['value'] = "Boijmans";
 	}
 
-	$link = '/ <a title="organisator" href="' . $v['organisator']['value'] . '">' . $v['organisatorLabel']['value'] . '</a>';
+	if($v['locLabel']['value'] == "Waag van Amsterdam"){
+		$v['locLabel']['value'] = "Waag";
+	}
+
+	$link = '/ <a title="locatie" href="' . $v['loc']['value'] . '">' . $v['locLabel']['value'] . '</a>';
 
 	return $link;
 

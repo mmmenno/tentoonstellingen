@@ -61,17 +61,34 @@ include("_parts/header.php");
 		
 		<div class="col-md-4">
 			
-				<h3>Aantallen op Wikidata</h3>
+				<h3>Hoeveel tentoonstellingen vind je op Wikidata?</h3>
 				
-				<p>Er staan op het moment van schrijven zo'n 3600 Nederlandse kunst- en tijdelijke tentoonstellingen op Wikidata. Die zijn te groeperen, zoals hieronder op organisator of op locatie.</p>
+				<p>Er staan op het moment van schrijven zo'n 4000 Nederlandse <a href="https://www.wikidata.org/wiki/Q667276">kunst- (Q667276)</a> en <a href="https://www.wikidata.org/wiki/Q29023906">tijdelijke (Q29023906)</a> tentoonstellingen op Wikidata. Die zou je allemaal samen kunnen opvragen, maar waarschijnlijk wil je ze liever per locatie (het gebouw) of per museum (organisatie) bekijken.</p>
 
-				<iframe style="width: 100%; height: 50vh; border: none; margin: 20px 0 4px 0; opacity: 0.8; " src="https://query.wikidata.org/embed.html#%20%23defaultView%3ABubbleChart%0ASELECT%20%3Forganiser%20%3ForganiserLabel%20(COUNT(%3Fitem)%20AS%20%3Fnr)%20WHERE%20%7B%0A%20%20values%20%3Fexpo%20%7B%20wd%3AQ29023906%20wd%3AQ667276%20%7D%0A%20%20%3Fitem%20wdt%3AP31%20%3Fexpo%20.%0A%20%20%3Fitem%20wdt%3AP17%20wd%3AQ55%20.%0A%20%20%3Fitem%20wdt%3AP664%20%3Forganiser%20.%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22nl%2Cen%22.%20%7D%0A%7D%0Agroup%20by%20%3Forganiser%20%3ForganiserLabel%0Alimit%201000" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+				<p>Een overzicht van de aantallen tentoonstellingen in Nederland per locatie kan je in Wikidata opvragen en als <a href="https://w.wiki/Bi$S">lijst</a> of als <a href="https://w.wiki/BqLK">bubble chart</a> bekijken.</p>
 
-				<p class="onderschrift">Aantallen tentoonstellingen per organisator, ook als <a href="https://w.wiki/Bizs">lijst te bekijken</a>.</p>
+				<p class="smaller">Ook de aantallen tentoonstellingen per museum (organisator) zijn als <a href="https://w.wiki/Bizs">lijst</a> of als <a href="https://w.wiki/BqLn">bubble chart</a> te bekijken.</p>
 
-				<iframe style="width: 100%; height: 50vh; border: none; margin: 20px 0 4px 0; opacity: 0.8; " src="https://query.wikidata.org/embed.html#%23defaultView%3ABubbleChart%0ASELECT%20%3Flocatie%20%3FlocatieLabel%20(COUNT(%3Fitem)%20AS%20%3Fnr)%20WHERE%20%7B%0A%20%20values%20%3Fexpo%20%7B%20wd%3AQ29023906%20wd%3AQ667276%20%7D%0A%20%20%3Fitem%20wdt%3AP31%20%3Fexpo%20.%0A%20%20%3Fitem%20wdt%3AP17%20wd%3AQ55%20.%0A%20%20%3Fitem%20wdt%3AP276%20%3Flocatie%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22nl%2Cen%22.%20%7D%0A%7D%0Agroup%20by%20%3Flocatie%20%3FlocatieLabel%0Alimit%201000" referrerpolicy="origin" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
 
-				<p class="onderschrift">Aantallen tentoonstellingen per locatie, ook als <a href="https://w.wiki/Bi$S">lijst te bekijken</a>.</p>
+				<h3>Wat was er te zien?</h3>
+
+				<p>Als een object een item op Wikidata heeft (dankzij het project <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_sum_of_all_paintings">Sum of All Paintings</a> is dat voor honderdduizenden schilderijen het geval), dan is het met de property <a href="https://www.wikidata.org/wiki/Property:P608">geëxposeerd op</a> met een tentoonstelling te verbinden.</p>
+
+				<p>Met de tentoonstelling <a href="https://www.wikidata.org/wiki/Q109994766">Vergeet me niet</a> in het Rijksmuseum zijn zo bijvoorbeeld <a href="https://w.wiki/Bkrr">112 werken verbonden</a>.</p>
+			
+
+
+				
+				<h3>Afbeeldingen</h3>
+				
+				<p>to do</p>
+
+
+
+
+				
+
+				
 				
 			
 		</div>
@@ -79,16 +96,20 @@ include("_parts/header.php");
 		<div class="col-md-4">
 
 
-				<h3>Tentoonstellingen per locatie</h3>
+				<h3>Per locatie</h3>
 				
-				<p></p>
+				<p>Museum Boijmans zat tot 1935 in het <a href="locatie.php?locatie=Q2801130">Schielandshuis</a>, het Amsterdams Historisch Museum en het Joods Historisch Museum hadden, ook een tijdje samen, hun onderkomen in <a href="locatie.php?locatie=Q2466999">de Amsterdamse Waag</a>.</p>
+
+				<p>Hieronder linkjes naar tentoonstellingsoverzichten op nog een aantal locaties:</p>
 
 				<ul>
-					<li><a href="locatie.php?locatie=Q2466999">De Waag</a></li>
-					<li><a href="locatie.php?locatie=Q130730258">Joods Museum</a></li>
+					<li><a href="locatie.php?locatie=Q130730258">Joods Museum</a> (het gebouwencomplex)</li>
+					<li><a href="locatie.php?locatie=Q2206529">Hollandsche Schouwburg</a></li>
+					<li><a href="locatie.php?locatie=Q1909968">Burgerweeshuis</a></li>
 					<li><a href="locatie.php?locatie=Q2077209">Paleis voor Volksvlijt</a></li>
 				</ul>
 
+				
 
 
 			
@@ -102,15 +123,6 @@ include("_parts/header.php");
 				</ul>
 
 
-
-
-				<h3>Afbeeldingen</h3>
-				
-				<p></p>
-
-
-
-
 				<h3>Archieven</h3>
 				
 				<p>Correspondentie, ontwerpschetsen, foto's, etc. komen in het archief van het museum terecht. Soms komt die documentatie na verloop van tijd bij een archiefinstelling terecht. Zo zijn tentoonstellingen van de Amsterdamse gemeentelijke musea online terug te vinden bij het Stadsarchief Amsterdam.</p>
@@ -118,10 +130,31 @@ include("_parts/header.php");
 				<img src="_assets/img/kosten-pw-tentoonstelling.jpg" />
 
 				<p class="onderschrift">De rekening van de tentoonstelling <a href="http://www.wikidata.org/entity/Q130641334">Amsterdam, verleden en toekomst</a> is terug te vinden <a href="https://archief.amsterdam/inventarissen/file/3b17dbba-b7c8-f19d-b8fb-163f40bb6d51">in het Stadsarchief Amsterdam</a>. Blijkbaar was het btw-tarief in 1950 drie procent.</p>
+				
+
+
+				
+
+				
 			
 		</div>
 
 		<div class="col-md-4">
+
+				<h3>Per organisatie</h3>
+				
+				<p>Zoek je tentoonstellingen georganiseerd door een specifiek museum, dan kan je dus tentoonstellingen op verschillende locaties tegenkomen. Het <a href="organisatie.php?organisator=Q702726">Joods Museum</a> programmeert niet alleen in het JM gebouwencomplex, maar ook in de Hollandsche Schouwburg, en vroeger zaten ze dus in De Waag.</p>
+
+				<p>Bekijk ook de tentoonstellingsoverzichten van de de organisaties hieronder:</p>
+
+				<ul>
+					<li><a href="organisatie.php?organisator=Q1131589">Wereldmuseum Amsterdam</a></li>
+					<li><a href="organisatie.php?organisator=Q1820897">Amsterdam Museum</a></li>
+					<li><a href="organisatie.php?organisator=Q1886176">Museum Willet-Holthuysen</a></li>
+					<li><a href="organisatie.php?organisator=Q679527">Museum Boijmans</a></li>
+				</ul>
+
+				<p>Als je erop let, zie je dat gebouw en organisatie op Wikidata soms nog wat door elkaar lopen. Er is wat dat aangaat nog wel gelegenheid het één en ander te verbeteren.</p>
 			
 				<h3>Onderwerpen</h3>
 				
@@ -141,12 +174,7 @@ include("_parts/header.php");
 
 
 
-				<h3>Wat was er te zien?</h3>
-
-				<p>Als een object een item op Wikidata heeft (dankzij het project <a href="https://www.wikidata.org/wiki/Wikidata:WikiProject_sum_of_all_paintings">Sum of All Paintings</a> is dat voor honderdduizenden schilderijen het geval), dan is het met de property <a href="https://www.wikidata.org/wiki/Property:P608">geëxposeerd op</a> met een tentoonstelling te verbinden.</p>
-
-				<p>Met de tentoonstelling <a href="https://www.wikidata.org/wiki/Q109994766">Vergeet me niet</a> in het Rijksmuseum zijn zo bijvoorbeeld <a href="https://w.wiki/Bkrr">112 werken verbonden</a>.</p>
-			
+				
 		</div>
 
 
