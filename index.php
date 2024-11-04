@@ -36,7 +36,7 @@ include("_parts/header.php");
 
 
 <div class="container" id="main">
-	<h1>Tentoonstellingen in NL archiveren, wordt het daar niet eens tijd voor?</h1>
+	<h1>Een nieuwe blik op Nederlands tentoonstellingsverleden</h1>
 
 
 	<div class="row">
