@@ -36,7 +36,7 @@ include("_parts/header.php");
 
 
 <div class="container" id="main">
-	<h1>Een nieuwe blik op Nederlands tentoonstellingsverleden</h1>
+	<h1>Een nieuwe blik op Nederlands tentoonstellingsverleden, bij elkaar</h1>
 
 
 	<div class="row">
@@ -145,7 +145,7 @@ include("_parts/header.php");
 				
 				<p>Zoek je tentoonstellingen georganiseerd door een specifiek museum, dan kan je dus tentoonstellingen op verschillende locaties tegenkomen. Het <a href="organisatie.php?organisator=Q702726">Joods Museum</a> programmeert niet alleen in het JM gebouwencomplex, maar ook in de Hollandsche Schouwburg, en vroeger zaten ze dus in De Waag.</p>
 
-				<p>Bekijk ook de tentoonstellingsoverzichten van de de organisaties hieronder:</p>
+				<p>Bekijk ook de tentoonstellingsoverzichten van de organisaties hieronder:</p>
 
 				<ul>
 					<li><a href="organisatie.php?organisator=Q1131589">Wereldmuseum Amsterdam</a></li>
