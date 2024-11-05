@@ -81,13 +81,22 @@ include("_parts/header.php");
 				
 				<h3>Afbeeldingen</h3>
 				
-				<p>to do</p>
+				<p>Aan elk Wiki-item kan een <a href="https://www.wikidata.org/wiki/Property:P18">afbeelding (P18)</a> gekoppeld worden. Bekijk bijvoorbeeld de met tentoonstellingen in de volgende locaties / van de volgende organisaties verbonden afbeeldingen:</p>
 
 
 
+				<ul>
+					<li><a href="afbeeldingen.php?locatie=Q2077209">Paleis voor Volksvlijt</a> (locatie)</li>
+					<li><a href="afbeeldingen.php?organisator=Q1820897">het Amsterdam Museum</a> (organisatie)</li>
+					<li><a href="afbeeldingen.php?organisator=Q1131589">Wereldmuseum Amsterdam</a> (organisatie)</li>
+					<li><a href="afbeeldingen.php?organisator=Q1886176">Museum Willet-Holthuysen</a> (organisatie)</li>
+					<li><a href="afbeeldingen.php?organisator=Q679527">Museum Boijmans</a> (organisatie)</li>
+				</ul>
 
 				
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Radio_tentoonstelling_in_het_Paleis_van_Volksvlijt%2C_SFA022812618.jpg/800px-Radio_tentoonstelling_in_het_Paleis_van_Volksvlijt%2C_SFA022812618.jpg" />
 
+				<p class="onderschrift">Deze foto van de <a href="https://www.wikidata.org/wiki/Q130674749">Radio-Tentoonstelling van den Nederlandschen Bond van Radio-Handelaren</a> is niet via de property afbeelding op Wikidata met de tentoonstelling verbonden (het is gebruikelijk op die manier maar één afbeelding met een item te verbinden), maar wel andersom: <a href="https://commons.wikimedia.org/wiki/File:Radio_tentoonstelling_in_het_Paleis_van_Volksvlijt,_SFA022812618.jpg">op Commons</a>, onder het tabje 'gestructureerde data' met de property 'beeldt af'.</p>
 				
 				
 			
@@ -129,7 +138,7 @@ include("_parts/header.php");
 
 				<img src="_assets/img/kosten-pw-tentoonstelling.jpg" />
 
-				<p class="onderschrift">De rekening van de tentoonstelling <a href="http://www.wikidata.org/entity/Q130641334">Amsterdam, verleden en toekomst</a> is terug te vinden <a href="https://archief.amsterdam/inventarissen/file/3b17dbba-b7c8-f19d-b8fb-163f40bb6d51">in het Stadsarchief Amsterdam</a>. Blijkbaar was het btw-tarief in 1950 drie procent.</p>
+				<p class="onderschrift">De rekening van de tentoonstelling <a href="http://www.wikidata.org/entity/Q130641334">Amsterdam, verleden en toekomst</a> is terug te vinden <a href="https://archief.amsterdam/inventarissen/file/3b17dbba-b7c8-f19d-b8fb-163f40bb6d51">in het Stadsarchief Amsterdam</a>. Het btw-tarief op cultuur lijkt in 1950 drie procent te zijn geweest.</p>
 				
 
 
