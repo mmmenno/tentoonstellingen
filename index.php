@@ -167,18 +167,11 @@ include("_parts/header.php");
 			
 				<h3>Onderwerpen</h3>
 				
-				<p>Met de property <a href="https://www.wikidata.org/wiki/Property:P921">hoofdonderwerp</a> zijn tentoonstellingen te verbinden met degene die of hetgene dat ze als onderwerp hebben. Dat zijn logischerwijs vaak kunstenaars, maar het kunnen natuurlijk ook stromingen, genres, stadswijken, gebouwen, expedities, etc. zijn. De top vijf:</p>
+				<p>Met de property <a href="https://www.wikidata.org/wiki/Property:P921">hoofdonderwerp</a> zijn tentoonstellingen te verbinden met degene die of hetgene dat ze als onderwerp hebben.</p>
 
-				<ul>
-					<li>Rembrandt</li>
-					<li>Peter Paul Rubens</li>
-					<li>Salvador Dalí</li>
-					<li>Pablo Picasso</li>
-					<li>Co Westerik</li>
-				</ul>
+				<p>Je kunt hier <a href="onderwerpen.php">alle onderwerpen</a> bekijken (en de daarmee verbonden tentoonstellingen). Die onderwerpen zijn ook items met allerlei kenmerken, dus je kunt ook alleen de <a href="onderwerpen.php?cat=nonhuman">onderwerpen die geen mens zijn</a> opvragen, of specifieker alle <a href="onderwerpen.php?cat=Q968159">kunststromingen</a> of onderwerpen <a href="onderwerpen.php?cat=amsterdam">gelegen binnen de gemeente Amsterdam</a>.
 
-
-				<p>De <a href="https://w.wiki/Bjvd">hele lijst</a> telt nu zo'n 750 onderwerpen die aan een kleine 1100 tentoonstellingen gelinkt zijn.</p>
+				<p>Je kunt ook de <a href="https://w.wiki/Bjvd">hele lijst op Wikidata</a> (met aantallen) bekijken.</p>
 				
 
 
