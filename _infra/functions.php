@@ -21,11 +21,7 @@ function fromto($v){
 
 			if($from==$to && $from != "?"){
 				$to = "";
-				$from = date("M",strtotime($v['begin']['value']));
-				$from = str_replace($monthfrom, $monthto, $from);
-				if($from == "januari"){ // denk dat hier alleen jaar bekend is, geen zin om query aan te passen voor precisie
-					$from = "";
-				}
+				$from = ""; // denk dat hier alleen jaar bekend is, geen zin om query aan te passen voor precisie
 			}else{
 				$to = " - " . $to;
 			}
