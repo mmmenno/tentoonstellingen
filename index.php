@@ -63,11 +63,11 @@ include("_parts/header.php");
 			
 				<h3>Hoeveel tentoonstellingen vind je op Wikidata?</h3>
 				
-				<p>Er staan op het moment van schrijven zo'n 4000 Nederlandse <a href="https://www.wikidata.org/wiki/Q667276">kunst- (Q667276)</a> en <a href="https://www.wikidata.org/wiki/Q29023906">tijdelijke (Q29023906)</a> tentoonstellingen op Wikidata. Die zou je allemaal samen kunnen opvragen, maar waarschijnlijk wil je ze liever per locatie (het gebouw) of per museum (organisatie) bekijken.</p>
+				<p>Er staan op het moment van schrijven zo'n 4000 Nederlandse <a href="https://www.wikidata.org/wiki/Q667276">kunst- (Q667276)</a>, <a href="https://www.wikidata.org/wiki/Q59861107">tijdelijke kunst- (Q59861107)</a> en  <a href="https://www.wikidata.org/wiki/Q29023906">tijdelijke (Q29023906)</a> tentoonstellingen op Wikidata. Die zou je allemaal samen kunnen opvragen, maar waarschijnlijk wil je ze liever per locatie (het gebouw) of per museum (organisatie) bekijken.</p>
 
-				<p>Een overzicht van de aantallen tentoonstellingen in Nederland per locatie kan je in Wikidata opvragen en als <a href="https://w.wiki/Bi$S">lijst</a> of als <a href="https://w.wiki/BqLK">bubble chart</a> bekijken.</p>
+				<p>Een overzicht van de aantallen tentoonstellingen per locatie in Nederland kan je in Wikidata opvragen en als <a href="https://w.wiki/CPq5">lijst</a> of als <a href="https://w.wiki/CPq8">bubble chart</a> bekijken.</p>
 
-				<p class="smaller">Ook de aantallen tentoonstellingen per museum (organisator) zijn als <a href="https://w.wiki/Bizs">lijst</a> of als <a href="https://w.wiki/BqLn">bubble chart</a> te bekijken.</p>
+				<p class="smaller">Ook de aantallen tentoonstellingen per museum (organisator) zijn als <a href="https://w.wiki/CPqF">lijst</a> of als <a href="https://w.wiki/CPqJ">bubble chart</a> te bekijken.</p>
 
 
 				<h3>Wat was er te zien?</h3>
@@ -116,11 +116,10 @@ include("_parts/header.php");
 					<li><a href="locatie.php?locatie=Q2206529">Hollandsche Schouwburg</a></li>
 					<li><a href="locatie.php?locatie=Q1909968">Burgerweeshuis</a></li>
 					<li><a href="locatie.php?locatie=Q2077209">Paleis voor Volksvlijt</a></li>
+					<li><a href="locatie.php?locatie=Q42175133">Stedelijk Museum</a></li>
 				</ul>
 
 				
-
-
 			
 				<h3>In de krant</h3>
 				

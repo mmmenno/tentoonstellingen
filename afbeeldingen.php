@@ -14,7 +14,7 @@ if(isset($_GET['locatie'])){
 
 	$sparql = "
 		SELECT ?item ?itemLabel ?afb ?locLabel ?begin ?eind ?organisator ?organisatorLabel WHERE {
-	  values ?expo { wd:Q29023906 wd:Q667276 }
+	  values ?expo { wd:Q29023906 wd:Q667276 wd:Q59861107 }
 	  values ?loc { wd:" . $locatie . " }
 	  ?item wdt:P31 ?expo .
 	  ?item wdt:P276 ?loc .
@@ -38,7 +38,7 @@ if(isset($_GET['locatie'])){
 
 	$sparql = "
 		SELECT ?item ?itemLabel ?afb ?org ?orglabel (MIN(?start) AS ?begin) (MAX(?end) AS ?eind) (SAMPLE(?location) AS ?loc) (SAMPLE(?locationLabel) AS ?locLabel) WHERE {
-		  values ?expo { wd:Q29023906 wd:Q667276 }
+		  values ?expo { wd:Q29023906 wd:Q667276 wd:Q59861107 }
 		  values ?org { wd:" . $organisator . " }
 		  ?item wdt:P31 ?expo .
 		  ?item wdt:P276 ?location .
@@ -175,28 +175,7 @@ include("_parts/header.php");
 
 <?php
 
-function fromto($v){
-	$monthfrom = array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
-	    $monthto = array("januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december");
 
-			$from = date("j M",strtotime($v['begin']['value']));
-			$from = str_replace($monthfrom, $monthto, $from);
-
-			$to = date("j M",strtotime($v['eind']['value']));
-			$to = str_replace($monthfrom, $monthto, $to);
-
-			if($from==$to){
-				$to = "";
-				$from = date("M",strtotime($v['begin']['value']));
-				$from = str_replace($monthfrom, $monthto, $from);
-			}else{
-				$to = " - " . $to;
-			}
-
-			$to .= " " . substr(date("Y",strtotime($v['eind']['value'])),0,4);
-
-			return $from . $to;
-}
 
 function displayorg($v){
 

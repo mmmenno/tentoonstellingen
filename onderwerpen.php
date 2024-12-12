@@ -7,16 +7,17 @@ if(isset($_GET['subj'])){
 
 	if(!preg_match("/^Q[0-9]+$/",$_GET['subj'])){
 		echo $_GET['subj'];
-		die ('malformed location, want Qnumber');
+		die ('malformed location, want ik wil een Qnummer');
 	}
 
 	$sparql = "
 	SELECT ?item ?itemLabel (MIN(?start) AS ?begin) (MAX(?end) AS ?eind) ?loc ?locLabel ?onderwerp ?onderwerpLabel WHERE {
-	  values ?expo { wd:Q29023906 wd:Q667276 }
+	  values ?expo { wd:Q29023906 wd:Q667276 wd:Q59861107 }
 	  values ?onderwerp { wd:" . $_GET['subj'] . " }
 	  ?item wdt:P31 ?expo .
-  	?item wdt:P17 wd:Q55 .
-  	?item wdt:P921 ?onderwerp . 
+  	  ?item wdt:P276 ?locatie .
+      ?locatie wdt:P17 wd:Q55 .
+  	  ?item wdt:P921 ?onderwerp . 
 	  ?item wdt:P276 ?loc .
 	  optional{
 	  	?item wdt:P580 ?start .
@@ -46,9 +47,10 @@ if(isset($_GET['subj'])){
 if(isset($_GET['cat']) && $_GET['cat'] == "nonhuman"){
 	$sparql = "
 	SELECT ?onderwerp ?onderwerpLabel (COUNT(?item) AS ?nr) WHERE {
-	  values ?expo { wd:Q29023906 wd:Q667276 }
+	  values ?expo { wd:Q29023906 wd:Q667276 wd:Q59861107 }
 	  ?item wdt:P31 ?expo .
-	  ?item wdt:P17 wd:Q55 .
+  	  ?item wdt:P276 ?locatie .
+      ?locatie wdt:P17 wd:Q55 .
 	  ?item wdt:P921 ?onderwerp .
   	MINUS { ?onderwerp wdt:P31 wd:Q5 . }
 	  SERVICE wikibase:label { bd:serviceParam wikibase:language \"nl,en\". }
@@ -60,9 +62,10 @@ if(isset($_GET['cat']) && $_GET['cat'] == "nonhuman"){
 }elseif(isset($_GET['cat']) && preg_match("/^Q[0-9]+$/",$_GET['cat'])){
 	$sparql = "
 	SELECT ?onderwerp ?onderwerpLabel (COUNT(?item) AS ?nr) WHERE {
-	  values ?expo { wd:Q29023906 wd:Q667276 }
+	  values ?expo { wd:Q29023906 wd:Q667276 wd:Q59861107 }
 	  ?item wdt:P31 ?expo .
-	  ?item wdt:P17 wd:Q55 .
+  	  ?item wdt:P276 ?locatie .
+      ?locatie wdt:P17 wd:Q55 .
 	  ?item wdt:P921 ?onderwerp .
   	?onderwerp wdt:P31 wd:" . $_GET['cat'] . " . 
 	  SERVICE wikibase:label { bd:serviceParam wikibase:language \"nl,en\". }
@@ -74,9 +77,10 @@ if(isset($_GET['cat']) && $_GET['cat'] == "nonhuman"){
 }elseif(isset($_GET['cat']) && $_GET['cat'] == "amsterdam"){
 	$sparql = "
 	SELECT ?onderwerp ?onderwerpLabel (COUNT(?item) AS ?nr) WHERE {
-	  values ?expo { wd:Q29023906 wd:Q667276 }
+	  values ?expo { wd:Q29023906 wd:Q667276 wd:Q59861107 }
 	  ?item wdt:P31 ?expo .
-	  ?item wdt:P17 wd:Q55 .
+  	  ?item wdt:P276 ?locatie .
+      ?locatie wdt:P17 wd:Q55 .
 	  ?item wdt:P921 ?onderwerp .
   	?onderwerp wdt:P131 wd:Q9899 . 
 	  SERVICE wikibase:label { bd:serviceParam wikibase:language \"nl,en\". }
@@ -88,9 +92,10 @@ if(isset($_GET['cat']) && $_GET['cat'] == "nonhuman"){
 }else{
 	$sparql = "
 	SELECT ?onderwerp ?onderwerpLabel (COUNT(?item) AS ?nr) WHERE {
-	  values ?expo { wd:Q29023906 wd:Q667276 }
+	  values ?expo { wd:Q29023906 wd:Q667276 wd:Q59861107 }
 	  ?item wdt:P31 ?expo .
-	  ?item wdt:P17 wd:Q55 .
+  	  ?item wdt:P276 ?locatie .
+      ?locatie wdt:P17 wd:Q55 .
 	  ?item wdt:P921 ?onderwerp .
 	  SERVICE wikibase:label { bd:serviceParam wikibase:language \"nl,en\". }
 	}
@@ -163,16 +168,18 @@ if(isset($data['results']['bindings'][0])){
 
 			<?php foreach ($subjectdata['results']['bindings'] as $k => $v) {
 
-					$px = "12";
+					$px = "14";
 
-					if((int)$v['nr']['value'] > 7){
-						$px = "28";
-					}elseif((int)$v['nr']['value'] > 5){
+					if((int)$v['nr']['value'] > 9){
+						$px = "26";
+					}elseif((int)$v['nr']['value'] > 7){
 						$px = "24";
+					}elseif((int)$v['nr']['value'] > 5){
+						$px = "22";
 					}elseif((int)$v['nr']['value'] > 3){
 						$px = "20";
 					}elseif((int)$v['nr']['value'] > 1){
-						$px = "17";
+						$px = "18";
 					}
 
 
@@ -197,28 +204,7 @@ if(isset($data['results']['bindings'][0])){
 
 <?php
 
-function fromto($v){
-	$monthfrom = array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
-	    $monthto = array("januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december");
 
-			$from = date("j M",strtotime($v['begin']['value']));
-			$from = str_replace($monthfrom, $monthto, $from);
-
-			$to = date("j M",strtotime($v['eind']['value']));
-			$to = str_replace($monthfrom, $monthto, $to);
-
-			if($from==$to){
-				$to = "";
-				$from = date("M",strtotime($v['begin']['value']));
-				$from = str_replace($monthfrom, $monthto, $from);
-			}else{
-				$to = " - " . $to;
-			}
-
-			$to .= " " . substr(date("Y",strtotime($v['eind']['value'])),0,4);
-
-			return $from . $to;
-}
 
 function displayloc($v){
 

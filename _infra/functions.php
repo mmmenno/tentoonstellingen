@@ -1,6 +1,43 @@
 <?php
 
 
+function fromto($v){
+	$monthfrom = array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
+	    $monthto = array("januari","februari","maart","april","mei","juni","juli","augustus","september","oktober","november","december");
+
+	    	if(!isset($v['begin']['value'])){
+	    		$from = "?";
+	    	}else{
+	    		$from = date("j M",strtotime($v['begin']['value']));
+				$from = str_replace($monthfrom, $monthto, $from);	
+	    	}
+
+	    	if(!isset($v['eind']['value'])){
+	    		$to = "?";
+	    	}else{
+	    		$to = date("j M",strtotime($v['eind']['value']));
+				$to = str_replace($monthfrom, $monthto, $to);
+	    	}
+
+			if($from==$to && $from != "?"){
+				$to = "";
+				$from = date("M",strtotime($v['begin']['value']));
+				$from = str_replace($monthfrom, $monthto, $from);
+				if($from == "januari"){ // denk dat hier alleen jaar bekend is, geen zin om query aan te passen voor precisie
+					$from = "";
+				}
+			}else{
+				$to = " - " . $to;
+			}
+
+			if(isset($v['eind']['value'])){
+				$to .= " " . substr(date("Y",strtotime($v['eind']['value'])),0,4);
+			}
+
+			return $from . $to;
+}
+
+
 function getSparqlResults($endpoint,$query){
 
 

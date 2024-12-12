@@ -5,9 +5,10 @@ include("../_infra/functions.php");
 
 $sparql = "
 SELECT ?onderwerp ?onderwerpLabel (COUNT(?item) AS ?nr) WHERE {
-  values ?expo { wd:Q29023906 wd:Q667276 }
+  values ?expo { wd:Q29023906 wd:Q667276 wd:Q59861107 }
   ?item wdt:P31 ?expo .
-  ?item wdt:P17 wd:Q55 .
+  ?item wdt:P276 ?locatie .
+  ?locatie wdt:P17 wd:Q55 .
   ?item wdt:P921 ?onderwerp .
   SERVICE wikibase:label { bd:serviceParam wikibase:language \"nl,en\". }
 }
