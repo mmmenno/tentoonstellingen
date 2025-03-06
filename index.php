@@ -114,9 +114,10 @@ include("_parts/header.php");
 				<ul>
 					<li><a href="locatie.php?locatie=Q130730258">Joods Museum</a> (het gebouwencomplex)</li>
 					<li><a href="locatie.php?locatie=Q2206529">Hollandsche Schouwburg</a></li>
-					<li><a href="locatie.php?locatie=Q1909968">Burgerweeshuis</a></li>
+					<li><a href="locatie.php?locatie=Q1909968">Burgerweeshuis, Amsterdam</a></li>
 					<li><a href="locatie.php?locatie=Q2077209">Paleis voor Volksvlijt</a></li>
 					<li><a href="locatie.php?locatie=Q42175133">Stedelijk Museum</a></li>
+					<li><a href="locatie.php?locatie=Q24074969">Agnietenklooster, Utrecht</a></li>
 				</ul>
 
 				
@@ -160,6 +161,7 @@ include("_parts/header.php");
 					<li><a href="organisatie.php?organisator=Q1820897">Amsterdam Museum</a></li>
 					<li><a href="organisatie.php?organisator=Q1886176">Museum Willet-Holthuysen</a></li>
 					<li><a href="organisatie.php?organisator=Q679527">Museum Boijmans</a></li>
+					<li><a href="organisatie.php?organisator=Q260913">Centraal Museum</a></li>
 				</ul>
 
 				<p>Als je erop let, zie je dat gebouw en organisatie op Wikidata soms nog wat door elkaar lopen. Er is wat dat aangaat nog wel gelegenheid het één en ander te verbeteren.</p>
